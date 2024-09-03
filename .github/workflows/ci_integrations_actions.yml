@@ -132,25 +132,25 @@ jobs:
         run: gh auth login --with-token <<< ${{ secrets.GITHUB_TOKEN }}
 
       - name: Download MacOS Build
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v4.1.7
         with:
           name: ci_integrations_macos
           path: metrics/ci_integrations/
 
       - name: Download Linux Build
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v4.1.7
         with:
           name: ci_integrations_linux
           path: metrics/ci_integrations/
 
       - name: Download Linux SHA256 Hash
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v4.1.7
         with:
           name: ci_integrations_linux_sha256
           path: metrics/ci_integrations/
 
       - name: Download MacOS SHA256 Hash
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v4.1.7
         with:
           name: ci_integrations_macos_sha256
           path: metrics/ci_integrations/
